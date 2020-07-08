@@ -1,0 +1,9 @@
+Simple workaround (there's a bug in msi install sequence file):
+
+download and install the server through the web installer and let it failed
+open C:\ProgramData\MySQL\MySQL Installer for Windows\Product Cache\mysql-5.7.20-winx64.exe or download msi installer from CDN (you can take the correct url from the installer logs)
+install the mysql-5.7.20-winx64.exe but exclude "Server Data Files"
+re-run the web installer and click "Quick Action / Reconfigure" and configure you mysql instance
+add the required packages
+1. go the folder C:\ProgramData\MySQL\MySQL Installer for Windows\Product Cache
+2. mysql-8.0.20-winx64 run this select middle option... then deselect server data files and run it
